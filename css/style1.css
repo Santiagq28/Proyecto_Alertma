@@ -50,8 +50,8 @@ nav a:hover{
     margin: 5%;
     display: grid;
     align-items: center;
-    justify-content: center;
-    width: 80vh;
+    justify-self: center;
+    width: 70vh;
     height: 70vh;
     border-radius: 10px;
     background-color: #ee82ca;
@@ -70,7 +70,7 @@ nav a:hover{
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 15px;
     font-size: 200%;
     padding: 20px 0px;
 }
@@ -82,18 +82,100 @@ nav a:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white; 
     padding: 0px 5px;
+    height: 65px;
+    margin: 0px 5%;
 }
 .c2 a:hover{
     
     background-color:white;
     color: #ee82ca;
     border: #ee82ca;
+    height: 120px;
+    transition-duration: 150ms;
 }
-
+.c2 a:hover p{
+    visibility: visible;
+}
+.c2 p{
+    background-color: white;
+    visibility: hidden;
+    color: gray;
+    font-size: 38%;
+    border-radius: 10px;
+}
+#registro{
+    height: 100vh;
+}
 .formulario {
     background-color: #f1a1bc;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
-    margin-top: 2%;
+    margin-top: 4%;
     display: grid;
-    gap: 5px;
+    gap: 12px;
+    border-radius: 5px;
+    height: 80vh;
+}
+.formulario h3{
+    text-align: center;
+    font-weight: 100;
+    margin: 0% 20%;
+
+}
+.formulario input{
+    background-color:#f1a1bc;
+    border: 2px solid white;
+    color: white;
+    margin: 0% 20%;
+}
+.formulario input::placeholder{
+    color: white;
+}
+.formulario select{
+    border: 2px solid white;
+    background-color: #f1a1bc;
+    color: white;
+    margin: 0% 20%;
+}
+.formulario a{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 30%;
+    border-radius: 10px;
+    text-decoration: none;
+    color:#ee82ca;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+
+#page{
+    display: flex;
+    justify-content: left;
+    height: 100vh;
+}
+.perfil{
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    background-color: #f1a1bc;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 100%;
+    padding: 0px 3%;
+    
+}
+.perfil img{
+    width: 10vh;
+    height: 10vh;
+}
+#info2 {
+    border-bottom: 2px solid white;
 }
