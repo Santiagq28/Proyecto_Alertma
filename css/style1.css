@@ -40,6 +40,21 @@ nav a:hover{
     text-decoration: overline;
     color: #f70354;
 }
+.login{
+    text-align: center;
+    text-decoration: none;
+    background-color:#f1a1bc;
+    border: white 2px solid;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: white;
+    margin-left: 5px;
+}
+.login:hover{
+    background-color: white;
+    color: #f1a1bc;
+    transition-duration: 200ms;
+}
 
 .container{
     width: 100%;
@@ -107,15 +122,18 @@ nav a:hover{
     height: 100vh;
 }
 .formulario {
-    background-color: #f1a1bc;
+    background-color:#f779a3;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
     margin-top: 4%;
-    display: grid;
+    display: flex;
     gap: 12px;
     border-radius: 5px;
-    height: 80vh;
+    height: 60vh;
+    margin: 4% 5%;
+    justify-content: center;
+    text-align: center;
 }
 .formulario h3{
     text-align: center;
@@ -150,6 +168,14 @@ nav a:hover{
     font-weight: 800;
     margin-top: 10px;
 }
+.form{
+    margin: 10px;
+    background-color: #f1a1bc;
+    width: 40%;
+    display: grid;
+    gap: 5px;
+    padding: 20px 0px;
+}
 
 
 #page{
@@ -178,4 +204,42 @@ nav a:hover{
 }
 #info2 {
     border-bottom: 2px solid white;
+}
+
+.banner{
+    background-image: url(/images/lazo.jpg);
+    background-color: #f70354;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-size:cover;
+    background-position: center;
+}
+.banner img{
+    height: 80%;
+    width: 100%;
+}
+
+.ban{
+    background-color: #f70354;
+    margin: 5px;
+    height: 200px;
+    width: 100px;
+    padding: 10px 50px;
+    color: white;
+
+}
+.datos{
+    display: flex;
+    height: 100px;
+}
+
+.pag{
+    display: none;
+    position: absolute;
+}
+.reg:hover .pag{
+    display: block;
 }

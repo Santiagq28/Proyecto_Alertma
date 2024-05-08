@@ -13,7 +13,7 @@
     <header class="head">
         <div class="head1">
             <img src="/images/logo_fondo2.png" alt="Logo">
-            <h1>Aler <h1 id="tma">tma</h1></h1>
+            <h1>Alert <h1 id="tma">ma</h1></h1>
             
         </div>
         <div class="head2">
@@ -25,46 +25,69 @@
                 <a href="">Contact</a>
             </nav>
         </div>
-        <div>
-            <h2 id="info">Username</h2>
+        <div class="reg">
+            <h2 id="info"></h2>
+            <div class="perfil pag">
+                        <img src="../icons/user.svg" alt="User">
+                        <p id="info2">Bienvenido</p>
+                        <p id="names">Nombres: </p>
+                        <p id="lastnames">Apellidos: </p>
+                        <p id="dates">Fecha Nacimiento: </p>
+                        <p id="edad">Edad: </p>
+                        <p id="cel">Teléfono: </p>
+                        <p id="genero">Género: </p>
+                </div>
         </div>
     </header>
-    <div id="page">
-        <div class="perfil">
-                <img src="../icons/user.svg" alt="User">
-                <p id="info2"></p>
-                <p id="names">Nombres: </p>
-                <p id="lastnames">Apellidos: </p>
-                <p id="dates">Fecha Nacimiento: </p>
-                <p id="edad">Edad: </p>
-                <p id="cel">Teléfono: </p>
-                <p id="genero">Género: </p>
+    <div class="container" id="page">
+        <div class="banner">
+            <div class="datos">
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                
+                </div>
+                <div class="ban">
+                    <h3>Datos 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis alias culpa quae cum.</p>
+                
+                </div>
+            </div>
+            
         </div>
     </div>
+
     <div class="container" id="registro">
         <form action="" class="formulario">
-            <h3>Por favor, completa los siguientes campos.</h3>
-            <input type="text" placeholder="Ingrese su Primer Nombre..." id="name" autocomplete="off">
-            <input type="text" placeholder="Ingrese su Segundo Nombre..." id="name2" autocomplete="off">
-            <input type="text" placeholder="Ingrese su Primer Apellido..." id="lastname" autocomplete="off">
-            <input type="text" placeholder="Ingrese su Segundo Apellido..." id="lastname2" autocomplete="off">
-            <input type="date" id="date">
-            <input type="number" placeholder="Ingrese su Edad..." id="age" autocomplete="off">
-            <select name="Genero" id="gender">
-                <option value="select">Género</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Masculino">Masculino</option>
-                <option value="Otro">Otro</option>
-            </select>
-            <input type="email" placeholder="Ingrese su email..." autocomplete="off">
-            <input type="password" placeholder="Ingrese una contraseña..." autocomplete="off">
-            <input type="number"  id="number" placeholder="Ingrese su teléfono..." autocomplete="off">
-            <select name="histo" id="histo">
-                <option value="">¿Ha sido diagnósticado anteriormente?</option>
-                <option value="">Sí, ya me han diagnósticado.</option>
-                <option value="">No, no me han diagnósticado.</option>
-            </select>
-            <a href="#" onclick="datos()">Registrarse</a>
+            <div class="form">
+                <h3>Por favor, completa los siguientes campos.</h3>
+                <input type="text" placeholder="Ingrese su Nombre..." id="name" autocomplete="off">
+                <input type="text" placeholder="Ingrese su Apellido..." id="lastname" autocomplete="off">
+                <input type="date" id="date">
+                <input type="number" placeholder="Ingrese su Edad..." id="age" autocomplete="off">
+            </div>
+
+            
+            <div class="form">
+                <select name="Genero" id="gender">
+                    <option value="select">Género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <input type="email" placeholder="Ingrese su email..." autocomplete="off">
+                <input type="password" placeholder="Ingrese una contraseña..." autocomplete="off">
+                <input type="password" placeholder="Confirmar contraseña..." autocomplete="off">
+                <input type="number"  id="number" placeholder="Ingrese su teléfono..." autocomplete="off">
+                <a href="#" onclick="datos()">Registrarse</a>
+            </div>
+
+
+            
         </form>
     </div>
     

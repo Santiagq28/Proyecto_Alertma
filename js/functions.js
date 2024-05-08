@@ -1,7 +1,4 @@
 var name;
-var name2;
-var lastname;
-var lastname2;
 var date;
 var number;
 var genero;
@@ -18,9 +15,6 @@ function cargar(){
 }
 function datos(){
     name = document.getElementById("name").value;
-    name2 = document.getElementById("name2").value;
-    lastname = document.getElementById("lastname").value;
-    lastname2 = document.getElementById("lastname2").value;
     date = document.getElementById("date").value;
     number = document.getElementById("number").value;
     genero = document.getElementById("gender").value;
@@ -28,13 +22,13 @@ function datos(){
 
     registro = document.getElementById("registro");
 
-    if(name != "" && lastname != "" && lastname2 != "" && date != "" && number != "" && genero != "" && age != ""){
+    if(name != "" && lastname != "" && date != "" && number != "" && genero != "" && age != ""){
         registro.style.visibility = "hidden";
 
         document.getElementById("info").innerText = name;
         document.getElementById("info2").innerText = "Bienvenid@ " + name
-        document.getElementById("names").innerText += name+ " "+name2;
-        document.getElementById("lastnames").innerText += lastname+" "+lastname2;
+        document.getElementById("names").innerText += name
+        document.getElementById("lastnames").innerText += lastname
         document.getElementById("dates").innerText += date;
         document.getElementById("cel").innerText += number;
         document.getElementById("genero").innerText += genero;
