@@ -44,4 +44,8 @@ function datos(){
     
     
 }
+function news(){
+    const alertEl = document.querySelector('.alert');
+    alertEl.classList.toggle('hide');
+}
 console.log("Adiós "+name);
