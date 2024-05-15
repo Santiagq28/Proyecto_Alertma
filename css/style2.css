@@ -116,6 +116,37 @@ nav a:hover{
     border-width: 3px;
 }
 
+
+.info_pre{
+    background-color: #F2F2F2;
+    display: flex;
+    padding: 70px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.info_pre img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+.info_pre2 p{
+    color: #3E6980;
+    font-size: 30px;
+    padding-right: 25px;
+}
+.info_pre2 a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: large;
+    color: #3E6980;
+    font-weight: 600;
+
+}
+.info_pre2 a:hover{
+    border: solid 2px #61a3c7;
+}
+
 .notifications a {
     color: pink; /* Color del texto */
     text-decoration: none;
@@ -197,15 +228,14 @@ nav a:hover{
     justify-content: center;
     gap: 3px;
     width: 100%;
-    background-image: url(/images/f5.png);
-    color: #f70354;
-    height: 100vh;
+    background-image: url(/images/lazo.jpg);
+    color: #FFFFFF;
+    height: 80vh;
     position: relative;
     overflow: hidden;
     text-align: center;   
-    background-position:right;
+    background-position:center;
     background-size: cover;
-    margin-left: 20px;
     
     
 
@@ -243,36 +273,33 @@ nav a:hover{
     position: absolute; 
     top: 10px; 
     left: 20px; 
+}
+.description3{
+    font-size: 2.25rem;
+    font-weight: 100;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 2rem;
+    margin-top: 300px; 
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+    padding: 2px 5px;
+    background-color: #f70354;
+    text-decoration: none;
+    color: #F2F2F2;
+    border-radius: 10px;
+    border: 2px #F2F2F2 solid
       
 }
-.login {
-    text-align: start;
-    margin: 10px 60px 0;
+.description3:hover{
+    background-color: white;
+    color:#f70354;
+    border: 2px #f70354 solid;
+    transition: 300ms;
 }
 
-.login a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #f1a1bc;
-    color: #000;
-    border: 1px solid #0d0f14;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    transition: all 0.7s;
-}
-
-.login a:hover {
-    background-color: #f70354;
-    border-color: #f70354;
-    color: white;
-}
-
-.login a p {
-    font-weight: 600;
-}
 
 
 .information{
@@ -289,10 +316,12 @@ nav a:hover{
 .card_container{
     display: flex; 
     justify-content: space-between; 
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
     margin-top: -20px;
+    height: 100vh;
 }
 
 .card{
@@ -333,7 +362,7 @@ nav a:hover{
 }
 .card .back{
     transform: perspective(600px) rotateY(180deg);
-    background: #000;
+    background: #3E6980;
     padding: 15px;
     color: #fff;
     display: flex;
@@ -348,7 +377,7 @@ nav a:hover{
     line-height: 50px;
 }
 .card .back .link a{
-    color: #f70354;
+    color: #ffffff;
 }
 .card .back h3{
     font-size: 30px;
@@ -363,4 +392,103 @@ nav a:hover{
 }
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
+}
+.boton{
+    padding: 10px;
+    background-color: white;
+}
+
+#maps{
+    margin: 10% 1% 2% 0%;
+        display: flex;
+        justify-content: end;
+}
+#map{
+        background-color:gray;
+        padding: 10px;
+}
+#maps2{
+    background-color: #D1DBDE;
+    display: grid;
+    margin: 0px 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+#maps2 p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 0px 50px;
+}
+#map22{
+    font-weight: 800;
+}
+#maps3{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#maps3 a{
+    padding: 5px 15px;
+    background-color: #3E6980;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+#maps3 a:hover{
+    background-color: #61a3c7;
+}
+
+
+.cont3{
+    display: flex;
+    width: 100%;
+    background-color: #3E6980;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.calculo{
+    margin-top: 10%;
+    width: 50vh;
+    margin: 20px;
+}
+#dosis{
+    display: grid;
+    gap: 5px;
+    background-color: #D1DBDE;
+    padding: 10px;
+    font-size: large;
+    border-radius: 5px;
+}
+#dosis select{
+    border: 1px white solid;
+    padding: 5px;
+}
+#dosis input{
+    border: 1px white solid;
+    padding: 5px;
+}
+
+.info_cal{
+    width: 60vh;
+    color: #F2F2F2;
+    margin: 20px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.button2{
+    padding: 10px;
+    background-color: white;
+    margin: 0px 50px;
+    border-radius: 10px;
+}
+.button2:hover{
+    cursor: pointer;
+    border: 2px solid #3E6980;
 }
