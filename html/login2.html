@@ -57,6 +57,8 @@
                         <option value="2">Anastrozol (Arimidex)</option>
                         <option value="3">Letrozol (Femara)</option>
                         <option value="4">Exemestano (Aromasin)</option>
+                        <option value="5">Trastuzumab (Herceptin)</option>
+                        <option value="6">Palbociclib (Ibrance)</option>
                     </select><br>
                     <label for="">Ingrese la dosis (mg)</label>
                     <input type="number" placeholder="Dosis..." id="number" autocomplete="off"><br>
@@ -67,6 +69,7 @@
             <div class="info_cal">
                 <h3>Importancia del Tiempo entre Dosis</h3>
                 <p>El tiempo entre dosis de los medicamentos es crucial en el tratamiento del cáncer de mama para mantener niveles terapéuticos constantes en el organismo y minimizar el riesgo de efectos secundarios.</p>
+                <p id="nota">Nota: Este cálculo es una aproximación y puede no ser aplicable para todos los pacientes o situaciones. Los resultados pueden variar según las características individuales del paciente y el tipo específico de tratamiento. Siempre consulte a un profesional de la salud para obtener información precisa y siga las instrucciones de dosificación proporcionadas por su médico.</p>
             </div>
         </div>
 
@@ -165,20 +168,33 @@
             let number = document.getElementById("number").value;
             let tiempo;
             let dss;
+            let vm;
             if (med == 1){
-                dss = 30;
+                dss = 20;
+                vm = 6;
             }
             else if(med == 2){
                 dss = 1;
+                vm = 2;
             }
             else if(med = 3){
-                dss = 3.75;
+                dss = 2.5;
+                vm = 3;
                 
             }
             else if(med = 4){
                 dss = 25;
+                vm = 1;
             }
-            tiempo = Math.round((dss/number)*24);
+            else if(med = 5){
+                dss = 7;
+                vm = 5;
+            }
+            else if(med = 6){
+                dss = 125;
+                vm = 1.083;
+            }
+            tiempo = Math.round(vm*(1+(dss/number)));
             document.getElementById("tiempo").innerText = "Tiempo: "+tiempo + " días";
     
         }
