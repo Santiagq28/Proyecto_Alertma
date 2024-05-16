@@ -497,3 +497,53 @@ nav a:hover{
     color: black;
     font-weight: 600;
 }
+
+.not1{text-align: end;
+    max-width: 40vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 20px;
+    padding: 20px;
+    color: black;
+}
+.Recordatorios{
+    background-color: white;
+    padding: 20px;
+    border-radius: 2px;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#formRecord{
+    display: flex;
+}
+#formRecord1{
+    display: grid;
+}
+#formRecord1 input{
+    border-radius: 5px;
+    border: #F2D0D0 2px solid;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+#send,#view{
+    margin-top: 10px;
+    background-color: #F2A7AD;
+    border: #F2A7AD 1px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 600;
+}
+#send:hover,#view:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #F2A7AD;
+    transition: 200ms;
+}
+#records{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #F2A7AD;
+    text-align: center;
+}
