@@ -228,7 +228,7 @@ nav a:hover{
     justify-content: center;
     gap: 3px;
     width: 100%;
-    background-image: url(/images/lazo.jpg);
+    background-image: url(../images/lazo.jpg);
     color: #FFFFFF;
     height: 80vh;
     position: relative;

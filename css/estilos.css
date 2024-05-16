@@ -37,7 +37,7 @@ body {
 }
 
 .columna-derecha {
-	background-image: url(/images/cancer.jpg);
+	background-image: url(../images/cancer.jpg);
 	background-size: cover;
 	background-position-x: center;
 }
@@ -159,7 +159,7 @@ input:focus {
 
 
 .columna-derecha2 {
-	background-image: url(/images/tarjeta1.jpg);
+	background-image: url(../images/tarjeta1.jpg);
 	background-size: cover;
 	background-position-x: center;
 }
