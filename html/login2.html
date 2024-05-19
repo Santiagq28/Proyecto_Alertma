@@ -24,7 +24,7 @@
             </nav>
         </div>
         <div>
-            <h2>Username</h2>
+            <h2 id="nameg"></h2>
         </div>
     </header>
 
@@ -275,4 +275,9 @@
             document.getElementById("tiempo").innerText = "Tiempo: "+tiempo + " días";
     
         }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const name = localStorage.getItem('sharedData');
+            document.getElementById("nameg").innerText = name ? name : "Usuario";
+        });
     </script>

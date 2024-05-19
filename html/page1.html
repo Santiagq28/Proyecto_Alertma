@@ -41,6 +41,15 @@
         </div>
 
 
+        <div class="recfather">
+            <div class="rec">
+                <h2>Recetas:</h2><br>
+                <div id="recetas"></div>
+            </div>
+            <div></div>
+        </div>
+
+
 
         <div class="card_container">
             <div class="card">
@@ -102,3 +111,34 @@
 
 </body>
 </html>
+<style>
+    .recfather{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .rec{
+        background-color:#D1DBDE;
+        width: 50%;
+        padding: 5px;
+    }
+    #recetas div{
+        background-color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 10px 5px;
+        margin: 2px;
+    }
+</style>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let datos = localStorage.getItem('datos');
+        let datos2 = JSON.parse(datos);
+        
+
+        for(let y = 1;y<datos2.length;y++){
+                document.getElementById("recetas").innerHTML += "<div> <p>Receta"+y +": "+datos2[y][0]+" "+datos2[y][1]+"mg hasta "+datos2[y][2] +"</p></div>";
+        }
+
+        console.table(datos2);
+
+    });
+</script>
