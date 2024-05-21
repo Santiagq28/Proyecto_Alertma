@@ -46,6 +46,8 @@
                 <input type="number" id="dosiss" placeholder="Dosis medicamento"><br><br>
                 <label for="">Tiempo: </label><br>
                 <input type="date" id="time"><br><br>
+                <label for="">Recomendaciones:</label><br>
+                <input type="text" id="text">
                 <a href="#" onclick="sendMed()">Enviar</a>
             </form>
             <form action="">
@@ -73,9 +75,10 @@
         const med = document.getElementById("med").value;
         const dosis = document.getElementById("dosiss").value;
         const time = document.getElementById("time").value;
+        const rec = document.getElementById("text").value;
 
         let lista = [];
-        lista.push(med,dosis,time);
+        lista.push(med,dosis,time,rec);
         datos.push(lista);
         localStorage.setItem("datos", JSON.stringify(datos));
         alert("Datos enviados.");

@@ -46,7 +46,22 @@
                 <h2>Recetas:</h2><br>
                 <div id="recetas"></div>
             </div>
-            <div></div>
+            <div class="rec">
+                <h2>Observaciones:</h2>
+                <div></div>
+            </div>
+        </div>
+
+        <div>
+            <table id="tabla">
+                <tr id="enca">
+                    <td>Medicamento</td>
+                    <td>Dosis</td>
+                    <td>Frecuencia</td>
+                    <td>Duración</td>
+                    <td>Ver</td>
+                </tr>
+            </table>
         </div>
 
 
@@ -114,6 +129,7 @@
 <style>
     .recfather{
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
     }
     .rec{
         background-color:#D1DBDE;
@@ -123,8 +139,41 @@
     #recetas div{
         background-color: white;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: space-between;
         padding: 10px 5px;
         margin: 2px;
+        height: 70px;
+    }
+    .delete{
+        padding: 10px;
+        background-color: rgb(247, 128, 128);
+        color: white;
+        font-size: large;
+        font-weight: 900;
+        border-radius: 45%;
+        margin-right: 10px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+    .delete:hover{
+        cursor: pointer;
+        background-color: red;
+    }
+    #tabla{
+        border:gray 2px solid;
+        padding: 6px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    #tabla tr,td{
+        padding: 6px;
+    }
+    #enca{
+        background-color: #cfcece;
+        border: #cfcece 0px solid;
+        font-weight: 600;
     }
 </style>
 <script>
@@ -135,10 +184,17 @@
         
 
         for(let y = 1;y<datos2.length;y++){
-                document.getElementById("recetas").innerHTML += "<div> <p>Receta"+y +": "+datos2[y][0]+" "+datos2[y][1]+"mg hasta "+datos2[y][2] +"</p></div>";
+                document.getElementById("recetas").innerHTML += "<div> <p>Receta"+y +": "+datos2[y][0]+" "+datos2[y][1]+"mg hasta "+datos2[y][2] +"</p><p class='delete'>X</p></div>";
+                document.getElementById("tabla").innerHTML += "<tr><td>"+datos2[y][0]+"</td>"+"<td>"+datos2[y][1]+"</td><td></td><td>"+datos2[y][2]+"</td><td><a href='recetas.html' onclick='saveValue(id)' id='"+y+"'>Ver</a></td></tr>"
+                console.log(document.getElementById("tabla").value)
         }
 
         console.table(datos2);
 
     });
+    function saveValue(valor){
+        const valor2 = valor;
+        localStorage.setItem('valor', valor2);
+        console.log(valor2)
+    }
 </script>

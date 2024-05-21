@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tarjet">
+        <div class="tarjet1"><h1>Alertma</h1></div>
+        <div class="tarjet2">
+            <h2>Tu receta médica</h2>
+            <p id="recomendaciones"></p>
+            <div class="divtabla">
+                <table id="tabla">
+                    <tr id="enca">
+                        <td>Medicamento</td>
+                        <td>Dosis</td>
+                        <td>Frecuencia</td>
+                        <td>Duración</td>
+                        <td>Ver</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="diva">
+                <a href="#">Descargar Receta</a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        background-color: gray;
+    }
+    .tarjet{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        justify-content: center;
+        background-color: white;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        height: auto;
+        margin: 10vh 10%;
+    }
+    .tarjet1{
+        border-bottom: #d3d3d3 2px solid;
+    }
+    .tarjet2{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .diva{
+        margin-top: 30px;
+    }
+    .diva a{
+        width: 100px;
+        padding: 10px;
+        text-decoration: none;
+        font-size: large;
+        font-weight: 400;
+        background-color: white;
+        border: 2px solid gray;
+        color: gray;
+        border-radius: 10px;
+        
+    }
+    .divtabla{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    #tabla{
+        border:gray 2px solid;
+        padding: 6px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+    #tabla tr,td{
+        padding: 6px;
+    }
+    #enca{
+        background-color: #cfcece;
+        border: #cfcece 0px solid;
+        font-weight: 600;
+    }
+</style>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let datos = localStorage.getItem('datos');
+        let datos2 = JSON.parse(datos);
+
+        let receta = localStorage.getItem('valor');
+        document.getElementById("recomendaciones").innerText = datos2[receta][3];
+        document.getElementById("tabla").innerHTML += "<tr><td>"+datos2[receta][0]+"</td>"+"<td>"+datos2[receta][1]+"</td><td></td><td>"+datos2[receta][2]+"</td><td><a href='#'>Ver</a></td></tr>"
+
+    });
+</script>
