@@ -29,30 +29,60 @@
     </header>
 
     <main>
-        <div>
-            <form action="" id="formulario">
-                <label for="">Paciente: </label><br><br>
-                <label for="">Medicamento: </label><br>
-                <select name="" id="med">
-                    <option value=""></option>
-                        <option value="Tamoxifeno">Tamoxifeno (Nolvadex)</option>
-                        <option value="Anastrozol">Anastrozol (Arimidex)</option>
-                        <option value="Letrozol">Letrozol (Femara)</option>
-                        <option value="Exemestano">Exemestano (Aromasin)</option>
-                        <option value="Trastuzumab">Trastuzumab (Herceptin)</option>
-                        <option value="Palbociclib">Palbociclib (Ibrance)</option>
-                </select><br><br>
-                <label for="">Dosis (mg):</label><br>
-                <input type="number" id="dosiss" placeholder="Dosis medicamento"><br><br>
-                <label for="">Tiempo: </label><br>
-                <input type="date" id="time"><br><br>
-                <label for="">Recomendaciones:</label><br>
-                <input type="text" id="text">
+        <div class="recetar">
+            <div class="recetar2">
+                <div class="datos">
+                    <h2>Paciente</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ratione explicabo voluptatem! Quo esse sit ea, rerum optio id debitis, porro eaque excepturi quae ut deserunt deleniti, a unde dolorum.</p>
+                </div>
+                <div class="datos2">
+                    <form action="" id="formulario" class="formu">
+                        <label for="">Medicamento: </label>
+                        <select name="medicina" id="med">
+                            <option value=""></option>
+                                <option value="Tamoxifeno">Tamoxifeno (Nolvadex)</option>
+                                <option value="Anastrozol">Anastrozol (Arimidex)</option>
+                                <option value="Letrozol">Letrozol (Femara)</option>
+                                <option value="Exemestano">Exemestano (Aromasin)</option>
+                                <option value="Trastuzumab">Trastuzumab (Herceptin)</option>
+                                <option value="Palbociclib">Palbociclib (Ibrance)</option>
+                        </select>
+                        <label for="">Dosis (mg):</label>
+                        <input type="number" id="dosiss" placeholder="Dosis medicamento">
+                        <label for="">Tiempo: </label>
+                        <input type="date" id="time">
+                        
+                        
+                    </form>
+                    <form action="" class="formu">
+                        <label for="">Medicamento: </label>
+                        <select name="medicina">
+                            <option value=""></option>
+                                <option value="Tamoxifeno">Tamoxifeno (Nolvadex)</option>
+                                <option value="Anastrozol">Anastrozol (Arimidex)</option>
+                                <option value="Letrozol">Letrozol (Femara)</option>
+                                <option value="Exemestano">Exemestano (Aromasin)</option>
+                                <option value="Trastuzumab">Trastuzumab (Herceptin)</option>
+                                <option value="Palbociclib">Palbociclib (Ibrance)</option>
+                        </select>
+                        <label for="">Dosis (mg):</label>
+                        <input type="number"  placeholder="Dosis medicamento">
+                        <label for="">Tiempo: </label>
+                        <input type="date">
+                    </form>
+                </div>
+                <div class="rec">
+                    <label for="">Recomendaciones:</label>
+                    <textarea name="text" id="text"></textarea>
+                </div>
+                
+            </div>
+            <div class="enviar">
                 <a href="#" onclick="sendMed()">Enviar</a>
-            </form>
-            <form action="">
-
-            </form>
+            </div>
+            
+            
+            
         </div>
 
     </main>
@@ -61,11 +91,70 @@
 </body>
 </html>
 <style>
-    #formulario{
-        background-color: rgb(209, 207, 207);
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        width: 50%;
+    .recetar{
+        background-color: #6cd9fa;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .recetar2{
+        margin: 0 auto;
         text-align: center;
+        width: 50%;
+    }
+    .datos{
+        color: white;
+        text-align: left;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .datos h2{
+        font-size: 30px;
+    }
+    .datos2{
+        display: flex;
+        justify-content: center;
+    }
+    .formu{
+        text-align: left;
+        width: 50%;
+        height: 300px;
+        padding: 10px;
+    }
+    .formu input,#time,select{
+        border: white 1px solid;
+        border-radius: 5px;
+        height: 20%;
+        width: 100%;
+    }
+    .formu label{
+        font-size: 120%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .rec{
+        display: grid;
+        text-align: left;
+        font-size: 120%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    }
+    .rec textarea{
+        border: white 1px solid;
+        border-radius: 5px;
+        height: 150px;
+    }
+    .enviar{
+        text-align: center;
+        margin:30px;
+    }
+    .enviar a{
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: large;
+    }
+    .enviar a:hover{
+        border: 2px solid black;
     }
 </style>
 <script>

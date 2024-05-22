@@ -547,3 +547,24 @@ nav a:hover{
     border-left: 2px solid #F2A7AD;
     text-align: center;
 }
+
+.divtabla{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 10%;
+}
+#tabla{
+    border:gray 2px solid;
+    padding: 6px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#tabla tr,td{
+    padding: 6px;
+}
+#enca{
+    background-color: #cfcece;
+    border: #cfcece 0px solid;
+    font-weight: 600;
+}
